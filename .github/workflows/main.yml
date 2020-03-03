@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install R on VM
-    - run: apt install r-base
+      run: apt install r-base
     - name: Run hello_world_test script
       run: Rscript hello_world_test.R 
    
