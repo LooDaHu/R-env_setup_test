@@ -14,7 +14,8 @@ jobs:
     - name: Install devtools
       run: sudo R -e 'install.packages("devtools")'
     - name: Install Rperform
-      run: sudo R -e 'devtools::install_github(""LooDaHu/Rperform"")'
+      run: sudo R -e 'library("devtools")' 
+           sudo R -e 'devtools::install_github(""LooDaHu/Rperform"")'
     - name: Run hello_world_test script
       run: Rscript hello_world_test.R
      
