@@ -11,6 +11,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: install R on VM
       run: sudo apt install r-base
+    - name: Install devtools
+      run: sudo R -e install.packages("devtools")
+    - name: Install Rperform
+      run: sudo R -e devtools::install_github(""LooDaHu/Rperform"")
     - name: Run hello_world_test script
-      run: Rscript hello_world_test.R 
+      run: Rscript hello_world_test.R
+     
    
