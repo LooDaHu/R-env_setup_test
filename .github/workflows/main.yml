@@ -9,7 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: install R on VM
+    - name: Install System Dependencies for devtools
+      run: sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+    - name: Install R on VM
       run: sudo apt install r-base
     - name: Install devtools
       run: sudo R -e 'install.packages("devtools")'
