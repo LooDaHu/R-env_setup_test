@@ -9,10 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install R on VM
-      run: sudo apt install r-base
-    - name: Install devtools
-      run: sudo R -e 'getwd()'
-   
+      with:
+        fetch-depth: 2
+    - run: git checkout HEAD^   
  
    
